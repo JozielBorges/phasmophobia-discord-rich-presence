@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30523.141
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phasmophobia_RPC", "Phasmophobia_RPC\Phasmophobia_RPC.csproj", "{B4C90036-33E6-45AF-905B-3245B18E44C5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B4C90036-33E6-45AF-905B-3245B18E44C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4C90036-33E6-45AF-905B-3245B18E44C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4C90036-33E6-45AF-905B-3245B18E44C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4C90036-33E6-45AF-905B-3245B18E44C5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D4ADAD90-22FB-4E2E-B8AC-388E63DBC15B}
+	EndGlobalSection
+EndGlobal
