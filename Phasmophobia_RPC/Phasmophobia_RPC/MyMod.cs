@@ -1,4 +1,4 @@
-﻿using MelonLoader;
+using MelonLoader;
 using System;
 using System.Collections;
 using UnityEngine;
@@ -7,14 +7,12 @@ using UnityEngine.SceneManagement;
 namespace Phasmophobia_RPC {
     public class MyMod : MelonMod {
         public Discord.Discord discord;
-        public static ServerManager serverManager;
         public static bool loaded = false;
 
         public static long timeStamp = 0;
         public static string roomNow, roomOld,mapa;
 
         public override void OnApplicationStart() {
-            MelonCoroutines.Start(TakeGameObjects());
 
             discord = new Discord.Discord(765944720882270211, (System.UInt64)Discord.CreateFlags.Default);
         }
@@ -72,12 +70,6 @@ namespace Phasmophobia_RPC {
             } else {
                 return "Private";
             }
-        }
-        public IEnumerator TakeGameObjects() {
-            serverManager = UnityEngine.Object.FindObjectOfType<ServerManager>();
-            yield return new WaitForSeconds(0.1f);
-            yield return null;
-            yield break;
         }
 
         static void UpdateActivity(Discord.Discord discord, string state, string Details, long time) {
