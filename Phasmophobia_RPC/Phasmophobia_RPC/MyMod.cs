@@ -1,9 +1,9 @@
-using MelonLoader;
+﻿using MelonLoader;
 using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using Photon.Pun;
 namespace Phasmophobia_RPC {
     public class MyMod : MelonMod {
         public Discord.Discord discord;
@@ -39,27 +39,27 @@ namespace Phasmophobia_RPC {
                     }
                 });
             } else if(level >0){
-                roomNow = PhotonNetwork.room.Name;
+                roomNow = PhotonNetwork.CurrentRoom.Name;
                 roomOld = roomNow;
                 UpdateActivity(discord, IsRoomPrivate(), RoomName(), (Int32)(DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1))).TotalSeconds, playerSize);
             }
         }
         public override void OnUpdate() {
-            if (PhotonNetwork.inRoom) {
-                playerSize = PhotonNetwork.playerList.Length;
+            if (PhotonNetwork.InRoom) {
+                playerSize = PhotonNetwork.CurrentRoom.PlayerCount;
             }
 
             if(RoomName() != mapa) {
                 mapa = RoomName();
             }
 
-            if (PhotonNetwork.inRoom && PhotonNetwork.room.Name != roomOld) {
-                roomNow = PhotonNetwork.room.Name;
+            if (PhotonNetwork.InRoom && PhotonNetwork.CurrentRoom.Name != roomOld) {
+                roomNow = PhotonNetwork.CurrentRoom.Name;
                 roomOld = roomNow;
                 UpdateActivity(discord, IsRoomPrivate(), RoomName(), (Int32)(DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1))).TotalSeconds, playerSize);
             } 
 
-            if(PhotonNetwork.inRoom && PhotonNetwork.room.Name == roomOld && RoomName() != mapa) {
+            if(PhotonNetwork.InRoom && PhotonNetwork.CurrentRoom.Name == roomOld && RoomName() != mapa) {
                 UpdateActivity(discord, IsRoomPrivate(), RoomName(), (Int32)(DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1))).TotalSeconds, playerSize);
             }
             discord.RunCallbacks();
@@ -74,7 +74,7 @@ namespace Phasmophobia_RPC {
             return SceneRoom;
         }
         public string IsRoomPrivate() {
-            if (PhotonNetwork.room.IsVisible) {
+            if (PhotonNetwork.CurrentRoom.isVisible) {
                 return "Public";
             } else {
                 return "Private";
