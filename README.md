@@ -1,3 +1,8 @@
+### OUTDATE
+### Don't work anymore, new game updates detect melonloader and crash the game.
+
+
+
 # phasmophobia-discord-rich-presence
 The .dll that allows you to show if you are playing on any map.
 
