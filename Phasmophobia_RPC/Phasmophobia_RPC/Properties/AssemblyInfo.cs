@@ -14,7 +14,7 @@ using Phasmophobia_RPC;
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
-[assembly: MelonInfo(typeof(MyMod),"Discord RPC","0.0.3", "Knuckles#4442", "https://github.com/JozielBorges/phasmophobia-discord-rich-presence")]
+[assembly: MelonInfo(typeof(MyMod),"Discord RPC","0.0.5", "Knuckles#4442", "https://github.com/JozielBorges/phasmophobia-discord-rich-presence")]
 [assembly: MelonGame("Kinetic Games", "Phasmophobia")]
 
 // Definir ComVisible como false torna os tipos neste assembly invisíveis
