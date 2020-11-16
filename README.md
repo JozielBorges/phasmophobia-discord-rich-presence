@@ -10,7 +10,7 @@ The .dll that allows you to show if you are playing on any map.
 ### Hi there :wave: 
 ### This is Knuckles!
 
-### You need the [melon loader V0.2.7.1](https://melonwiki.xyz/#/README) to use this dll!
+### You need the [melon loader V0.2.7.2](https://melonwiki.xyz/#/README) to use this dll!
 
 
 ### Place "discord_game_sdk.dll" in the root folder of your game, and "Phasmophobia_RPC.dll" in the mods folder after installing melon loader.
